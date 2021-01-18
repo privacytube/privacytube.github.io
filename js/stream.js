@@ -12,11 +12,11 @@ console.log(data);
 for (i in data){
 
   const display = data[i].title + "<br>" + data[i].author
+  self.postMessage(display);
 
 
 }
 
-self.postMessage(display);
 
 
 });
