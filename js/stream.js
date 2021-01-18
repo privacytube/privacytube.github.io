@@ -23,8 +23,9 @@ for(var p in Object.getOwnPropertyNames(value)) {
   arr[p] = value[p];
 }
 for (i in arr){
-  let display = "<img src='" + arr[i].videoThumbnails[4].url +"'><br>"+ arr[i].title + " <br>" + arr[i].author
-  self.postMessage(display);
+  console.log(arr[i])
+  // let display = "<img src='" + arr[i].videoThumbnails[4].url +"'><br>"+ arr[i].title + " <br>" + arr[i].author
+  // self.postMessage(display);
 }
 
 
