@@ -3,6 +3,8 @@ importScripts("ponyfill.es6.js");
 const text = new TextDecoder();
 self.onmessage = function (e) {
 
+if (e.data!="pewdiepie"&&e.data!="kalvin garrah"){
+
 fetch(e.data)
 .then(response => response.json())
 .then(data => {
@@ -22,6 +24,6 @@ for (i in data){
 
 });
 
-
+}
 
 }
