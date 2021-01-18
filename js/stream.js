@@ -10,7 +10,8 @@ fetch(e.data)
 
 for (i in data){
 
-  const display =  "<img src='" + data[i].videoThumbnails[4].url + "'><br>" + data[i].title + "<br><a href='https://invidiou.site'"+ data[i].authorUrl  +"'>" + data[i].author + "</a>"
+  var u = 'https://invidiou.site' + data[i].authorUrl
+  const display =  "<img src='" + data[i].videoThumbnails[4].url + "'><br>" + data[i].title + "<br><a href='" + u +"'>" + data[i].author + "</a>"
   self.postMessage(display);
 
 
