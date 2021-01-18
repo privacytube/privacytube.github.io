@@ -1,7 +1,7 @@
 importScripts("ponyfill.es6.js");
 
 const text = new TextDecoder();
-self.onmessage = = function (e) {
+self.onmessage = function (e) {
 
 fetch(e.data)
 .then(response => response.json())
