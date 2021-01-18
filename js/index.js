@@ -20,9 +20,10 @@ stream.onmessage = function (e) {
   element.innerHTML = e.data;
 
   document.getElementById('first').append(element);
-  form.style.display = "none";
 
 }
+
+form.style.display = "none";
 
 
 
