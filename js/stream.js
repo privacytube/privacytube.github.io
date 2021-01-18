@@ -10,7 +10,7 @@ fetch(e.data)
 
 for (i in data){
 
-  const display =  "<img src='"> + data[i].videoThumbnails[4].url + "'><br>" + data[i].title + "<br>" + data[i].author
+  const display =  "<img src='" + data[i].videoThumbnails[4].url + "'><br>" + data[i].title + "<br>" + data[i].author
   self.postMessage(display);
 
 
