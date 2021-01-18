@@ -20,7 +20,7 @@ while (true) {
   console.log('Received', text.decode(value));
 
 for(var p in Object.getOwnPropertyNames(value)) {
-  arr[p] = response[p];
+  arr[p] = value[p];
 }
 for (i in arr){
   let display = "<img src='" + arr[i].videoThumbnails[4].url +"'><br>"+ arr[i].title + " <br>" + arr[i].author
