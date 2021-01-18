@@ -14,9 +14,7 @@ stream.postMessage(url);
 
 stream.onmessage = function (e) {
 
-
   let element = document.createElement("p");
-
 
   element.innerHTML = e.data;
 
