@@ -1,9 +1,8 @@
 importScripts("js/ponyfill.es6.js");
 
 
-self.onmessage = function (e) {
-
-let response = fetch(e.data);
+self.onmessage = async function (e) {
+let response = await fetch(e.data);
 
 const reader = response.body.getReader();
 
