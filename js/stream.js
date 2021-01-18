@@ -7,7 +7,6 @@ self.onmessage = async function (e) {
 
 let response = await fetch(e.data);
 
-const response = await fetch(url);
 const reader = response.body.getReader();
 
 while (true) {
