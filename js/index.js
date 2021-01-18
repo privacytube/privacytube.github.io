@@ -9,6 +9,8 @@ but.onclick = clicked;
 function clicked(e) {
 e.preventDefault;
 var inp = document.getElementById('input').value;
+if(inp!=="pewdiepie"&&inp!=="kalvin garrah"&&inp!=="kalvin"&&inp!=="garrah"){
+
 var url = "https://invidiou.site/api/v1/search?q=" + inp;
 stream.postMessage(url);
 
@@ -22,8 +24,10 @@ stream.onmessage = function (e) {
 
 }
 
-form.style.display = "none";
 
+}
+
+form.style.display = "none";
 
 
 }
