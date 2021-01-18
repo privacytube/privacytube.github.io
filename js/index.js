@@ -20,7 +20,7 @@ stream.onmessage = function (e) {
 
   element.innerHTML = e.data;
 
-  document.getElementById('first').append(element);
+  document.getElementById('first').prepend(element);
 
 }
 
