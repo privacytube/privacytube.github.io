@@ -8,31 +8,94 @@
     <style>
 
     body {
-
     background-color: #f8de6d;
     background-image: url("https://secureservercdn.net/50.62.195.83/i3h.e3a.myftpupload.com/wp-content/uploads/2020/09/ITT-Desktop-scaled.jpg");
     background-position: left top;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-size: 25px;
+    font-family: Voyage-Regular;
+}
 
+@font-face {
+    font-family: "Voyage-Regular";
+    font-display: swap;
+    src: url("fonts/Voyage-Regular.woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Voyage-Bold";
+    font-display: block;
+    src: url("fonts/Voyage-Bold.woff");
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Staff-Medium";
+    font-display: swap;
+    src: url("fonts/Staff-Medium.woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Staff-Regular";
+    font-display: swap;
+    src: url("fonts/Staff-Regular.woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avara-Black";
+    font-display: swap;
+    src: url("fonts/Avara-Black.woff");
+    font-style: normal;
+}
+
+label{
+  font-family: Voyage-Regular;
+  font-size: 105px;
+
+}
+
+#s{
+    font-family: Voyage-Regular;
+    font-size: 25px;
+    background: transparent;
+    box-shadow: 0 0 5px #46923b;
+}
+
+input{
+font-size: 25px;
+border-radius: 2px;
+padding-left: 3px;
+width: 260px;
+margin-bottom: 10px;
+transition: .3s;
+opacity: 0.75;
+}
+
+input:hover{
+  box-shadow: 0 0 5px seagreen;
+  border-radius: 3px;
+  opacity: 1;
 }
     </style>
   </head>
   <body>
 
-<form>
-  <label for="q">search</label>
-      <fieldset>
-          <input type="search" id="input" name="q" placeholder="search" value="">
-      </fieldset>
+<center><form>
+  <label for="input">SEARCH</label><br>
+          <input type="search" id="input" name="q"  value="">
 
       <button id="s" type="button">search</button>
 </form>
 
 <section id="first"></section>
 
-<section id="watch"></section>
+<section id="watch"></section></center>
 
 <script src="js/index.js"></script>
 
