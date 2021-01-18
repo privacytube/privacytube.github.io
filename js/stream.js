@@ -19,8 +19,7 @@ while (true) {
 
   console.log('Received', text.decode(value));
 
-var response = JSON.parse(text.decode(value));
-for(var p in Object.getOwnPropertyNames(response)) {
+for(var p in Object.getOwnPropertyNames(value)) {
   arr[p] = response[p];
 }
 for (i in arr){
