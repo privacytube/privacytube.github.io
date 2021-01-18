@@ -1,4 +1,4 @@
-importScripts("ponyfill.es6.js");
+importScripts("js/ponyfill.es6.js");
 
 
 self.onmessage = function (e) {
