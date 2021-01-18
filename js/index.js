@@ -1,5 +1,4 @@
 
-screen.lockOrientation('landscape');
 var stream = new Worker("js/stream.js")
 var but = document.getElementById('s');
 var inp = document.getElementById('input').value;
