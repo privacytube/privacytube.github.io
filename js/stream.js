@@ -3,7 +3,7 @@ importScripts("js/ponyfill.es6.js");
 
 self.onmessage = function (e) {
 
-let response = await fetch(e.data);
+let response = fetch(e.data);
 
 const reader = response.body.getReader();
 
