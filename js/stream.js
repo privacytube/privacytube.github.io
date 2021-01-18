@@ -1,6 +1,10 @@
 importScripts("ponyfill.es6.js");
 
+
+
 const text = new TextDecoder();
+var arr = [];
+
 self.onmessage = async function (e) {
 
 
@@ -16,9 +20,11 @@ while (true) {
   console.log('Received', text.decode(value));
 
 var response = JSON.parse(text.decode(value));
-
-for (i in response){
-  let display = "<img src='" + response[i].videoThumbnails[4].url +"'><br>"+ response[i].title + " <br>" + response[i].author
+for(var p in Object.getOwnPropertyNames(response)) {
+  arr[p] = response[p];
+}
+for (i in arr){
+  let display = "<img src='" + arr[i].videoThumbnails[4].url +"'><br>"+ arr[i].title + " <br>" + arr[i].author
   self.postMessage(display);
 }
 
