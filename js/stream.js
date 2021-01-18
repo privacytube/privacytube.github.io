@@ -5,9 +5,9 @@ self.onmessage = async function (e) {
 
 
 
-let response = await fetch(e.data);
+let res = await fetch(e.data);
 
-const reader = response.body.getReader();
+const reader = res.body.getReader();
 
 while (true) {
   const { value, done } = await reader.read();
