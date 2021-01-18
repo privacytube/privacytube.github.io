@@ -1,4 +1,4 @@
-importScripts("js/ponyfill.es6.js");
+importScripts("ponyfill.es6.js");
 
 
 self.onmessage = async function (e) {
