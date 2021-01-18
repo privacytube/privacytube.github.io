@@ -9,7 +9,6 @@ but.onclick = clicked;
 
 function clicked() {
 
-form.style.display = "none";
 
 var url = "https://invidiou.site/api/v1/search?q=" + inp;
 stream.postMessage(url);
@@ -21,6 +20,8 @@ stream.onmessage = function (e) {
   element.innerHTML = e.data;
 
   document.getElementById('first').append(element);
+  form.style.display = "none";
+
 }
 
 
