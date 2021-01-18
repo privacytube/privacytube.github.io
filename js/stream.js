@@ -6,9 +6,7 @@ self.onmessage = async function (e) {
 
 
 let response = await fetch(e.data);
-const reader = response.body
-  .pipeThrough(new TextDecoderStream())
-  .getReader();
+const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 while (true) {
   const { value, done } = await reader.read();
   if (done) break;
