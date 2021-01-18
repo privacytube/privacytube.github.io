@@ -25,9 +25,11 @@ stream.onmessage = function (e) {
 }
 
 
-}
+} else {
+
+
 
 form.style.display = "none";
-
+}
 
 }
