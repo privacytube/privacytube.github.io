@@ -7,8 +7,8 @@ var form = document.querySelector("form");
 
 but.onclick = clicked;
 
-function clicked() {
-
+function clicked(e) {
+e.preventDefault;
 
 var url = "https://invidiou.site/api/v1/search?q=" + inp;
 stream.postMessage(url);
