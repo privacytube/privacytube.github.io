@@ -17,7 +17,7 @@ while(true) {
   if (done) {
     break;
   }
-  console.log("Value is, " +value);
+  console.log("Value is, " +JSON.parse(value));
   chunks.push(value);
   receivedLength += value.length;
 
@@ -28,7 +28,7 @@ while(true) {
 let chunksAll = new Uint8Array(receivedLength); // (4.1)
 let position = 0;
 for(let chunk of chunks) {
-  console.log("chunk is, " +chunk)
+  console.log("chunk is, " +JSON.parse(chunk));
   // chunksAll.set(chunk, position); // (4.2)
   // position += chunk.length;
 }
