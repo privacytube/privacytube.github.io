@@ -5,7 +5,7 @@ var is = document.getElementById('first');
 
 but.onclick = clicked;
 function clicked(e) {
-// e.preventDefault;
+e.preventDefault;
 is.innerHTML = "<span></span>";
 var inp = document.getElementById('input').value;
 if(inp!=="pewdiepie"&&inp!=="kalvin garrah"&&inp!=="kalvin"&&inp!=="garrah"){
