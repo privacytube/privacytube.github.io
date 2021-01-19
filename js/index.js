@@ -4,8 +4,8 @@ var form = document.querySelector("form");
 var is = document.getElementById('first');
 
 but.onclick = clicked;
-function clicked(e) {
-e.preventDefault;
+function clicked(event) {
+eevent.preventDefault();
 is.innerHTML = "<span></span>";
 var inp = document.getElementById('input').value;
 if(inp!=="pewdiepie"&&inp!=="kalvin garrah"&&inp!=="kalvin"&&inp!=="garrah"){
