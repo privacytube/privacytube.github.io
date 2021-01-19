@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>PrivacyTube</title>
-    <meta description= "View Youtube on iOS in privacy.">
-    <link rel="manifest" href="manifest.json">
-    <style>
+<head>
+<meta charset="utf-8">
+<title>PrivacyTube</title>
+<meta description= "View Youtube on iOS in privacy.">
+<link rel="manifest" href="manifest.json">
+<style>
 @font-face {
-    font-family: "Voyage-Regular";
-    font-display: swap;
-    src: url("fonts/Voyage-Regular.woff");
-    font-style: normal;
+font-family: "Voyage-Regular";
+font-display: swap;
+src: url("fonts/Voyage-Regular.woff");
+font-style: normal;
 }
-
 @font-face {
-    font-family: "Voyage-Bold";
-    font-display: block;
-    src: url("fonts/Voyage-Bold.woff");
-    font-style: normal;
+font-family: "Voyage-Bold";
+font-display: block;
+src: url("fonts/Voyage-Bold.woff");
+font-style: normal;
 }
-
 body {
 background-color: #f8de6d;
 background-image: url("assets/bg.jpg");
@@ -32,9 +30,8 @@ font-family: Voyage-Regular;
 text-shadow: 0px 0px 20px white;
 }
 label{
-  font-family: Voyage-Regular;
-  font-size: 105px;
-
+font-family: Voyage-Regular;
+font-size: 105px;
 }
 input{
 font-size: 25px;
@@ -46,11 +43,10 @@ transition: .3s;
 opacity: 0.75;
 font-family: Voyage-Bold;
 }
-
 input:hover{
-  box-shadow: 0 0 5px seagreen;
-  border-radius: 3px;
-  opacity: 1;
+box-shadow: 0 0 5px seagreen;
+border-radius: 3px;
+opacity: 1;
 }
 section{
 width: 480px;
@@ -65,42 +61,26 @@ height: auto;
 -webkit-box-shadow: -1px 1px 9px 0px #000;
 box-shadow: -1px 1px 9px 0px #000
 }
-
-
 #s{
-    font-family: Voyage-Bold;
-    font-size: 25px;
-    box-shadow: 0 0 5px #46923b;
-    background: transparent;
+font-family: Voyage-Bold;
+font-size: 25px;
+box-shadow: 0 0 5px #46923b;
+background: transparent;
 }
-
 #d{
-  text-shadow: 0px 0px 10px white;
+text-shadow: 0px 0px 10px white;
 }
-
-    </style>
-  </head>
-  <body>
-
+</style>
+</head>
+<body>
 <center><form>
-  <label for="input">SEARCH</label><br>
-          <input type="search" id="input">
-
-      <button id="s" type="button">🔎</button>
+<label for="input">SEARCH</label><br>
+<input type="search" id="input">
+<button id="s" type="button">🔎</button>
 </form>
-
 <section id="first"></section>
-
-
-
 <footer><br><a id="d" href="download.html">download for iOS</a></footer>
-
-
 </center>
-
 <script src="js/index.js"></script>
-
-  </body>
-
-
+</body>
 </html>
