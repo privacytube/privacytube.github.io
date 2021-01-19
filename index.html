@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>PrivacyTube</title>
     <meta description= "View Youtube on iOS in privacy.">
-
+    <link rel="manifest" href="manifest.json">
     <style>
 @font-face {
     font-family: "Voyage-Regular";
@@ -23,12 +23,13 @@
 body {
 background-color: #f8de6d;
 background-image: url("assets/bg.jpg");
-background-position: left top;
+background-position: right bottom;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 font-size: 25px;
 font-family: Voyage-Regular;
+text-shadow: 0px 0px 20px white;
 }
 label{
   font-family: Voyage-Regular;
@@ -39,7 +40,7 @@ input{
 font-size: 25px;
 border-radius: 2px;
 padding-left: 3px;
-width: 260px;
+width: 280px;
 margin-bottom: 10px;
 transition: .3s;
 opacity: 0.75;
@@ -77,12 +78,6 @@ box-shadow: -1px 1px 9px 0px #000
   text-shadow: 0px 0px 10px white;
 }
 
-hr{
-  width: 400px;
-  opacity: 0.5;
-}
-
-
     </style>
   </head>
   <body>
@@ -91,7 +86,7 @@ hr{
   <label for="input">SEARCH</label><br>
           <input type="search" id="input">
 
-      <button id="s" type="button">search</button>
+      <button id="s" type="button">🔎</button>
 </form>
 
 <section id="first"></section>
