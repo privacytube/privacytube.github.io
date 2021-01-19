@@ -74,29 +74,21 @@ background: transparent;
 #d{
 text-shadow: 0px 0px 10px white;
 }
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: transparent;
-  color: white;
-  padding: 8px;
-  z-index: 100;
-}
 
-.skip-link:focus {
-  top: 0;
-}
 </style>
 </head>
 <body>
-<center><form>
-<a class="skip-link" href="#first">Skip to main</a>
+<center>
+
+<header>
+<form>
 <label for="input">SEARCH</label><br>
 <input type="search" id="input">
 <button id="s" type="button">🔎</button>
 </form>
-<section id="first"></section>
+</header>
+
+<main id="first"></main>
 <footer><br><a id="d" href="download.html">download for iOS</a></footer>
 </center>
 <script src="js/index.js"></script>
