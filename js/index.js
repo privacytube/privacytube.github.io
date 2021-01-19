@@ -33,6 +33,3 @@ form.style.display = "none";
 }
 
 }
-
-
-var input = document.getElementById("input");
