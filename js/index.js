@@ -5,12 +5,12 @@ var is = document.getElementById('first');
 
 but.onclick = clicked;
 function clicked(e) {
-e.preventDefault;
+// e.preventDefault;
 is.innerHTML = "<span></span>";
 var inp = document.getElementById('input').value;
 if(inp!=="pewdiepie"&&inp!=="kalvin garrah"&&inp!=="kalvin"&&inp!=="garrah"){
 
-var url = "https://invidiou.site/api/v1/search?q=" + inp;
+var url = "https://invidiou.048596.xyz/api/v1/search?q=" + inp;
 stream.postMessage(url);
 stream.onmessage = function (e) {
   let element = document.createElement("p");
