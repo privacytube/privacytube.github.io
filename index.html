@@ -1,108 +1,169 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<meta charset="utf-8">
-<title>PrivacyTube</title>
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta name="description" content="View Youtube on iOS in privacy.">
-<meta name="author" content="Ender Minyard">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8de6d">
+  <meta charset="utf-8">
+  <title>PrivacyTube</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="description" content="View Youtube on iOS in privacy.">
+  <meta name="author" content="Ender Minyard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8de6d">
 
-<meta property="og:title" content="PrivacyTube">
-<meta property="og:description" content="View Youtube on iOS in privacy.">
-<meta property="og:image" content="https://repository-images.githubusercontent.com/330763574/1302f380-5a0c-11eb-953f-cf3bdca60292">
-<meta property="og:url" content="https://privacytube.github.io/">
-<style>
-@font-face {
-font-family: "Voyage-Regular";
-font-display: swap;
-src: url("fonts/Voyage-Regular.woff") format('woff'), url("fonts/Voyage-Regular.ttf") format('truetype');
-font-style: normal;
-}
-@font-face {
-font-family: "Voyage-Bold";
-font-display: block;
-src: url("fonts/Voyage-Bold.woff");
-font-style: normal;
-}
-body {
-background-color: #ebe3d2;
-font-size: 25px;
-font-family: Voyage-Regular;
-text-shadow: 0px 0px 20px white;
-}
-label{
-font-family: Voyage-Regular;
-font-size: 85px;
-}
-input{
-padding-left: 3px;
-width: 250px;
-margin-bottom: 10px;
-transition: .3s;
-opacity: 0.75;
-font-family: Voyage-Regular;
-font-size: 25px;
-}
-input:hover{
-box-shadow: 0 0 5px black;
-border-radius: 3px;
-opacity: 1;
-}
-main{
-width: 300px;
-}
-a{
-color: black;
-}
-img{
-border-radius: 0px;
-width: 100%;
-height: auto;
--webkit-box-shadow: -1px 1px 9px 0px #000;
-box-shadow: -1px 1px 9px 0px #000
-}
-#s{
-font-family: Voyage-Bold;
-font-size: 25px;
-background: transparent;
-text-shadow: 0px 0px 10px white;
-border:none;
-border-radius: 0px;
-margin: 0px;
-padding: 0px;
+  <meta property="og:title" content="PrivacyTube">
+  <meta property="og:description" content="View Youtube on iOS in privacy.">
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/330763574/1302f380-5a0c-11eb-953f-cf3bdca60292">
+  <meta property="og:url" content="https://privacytube.github.io/">
+  <style>
+    @font-face {
+      font-family: "Voyage-Regular";
+      font-display: swap;
+      src: url("fonts/Voyage-Regular.woff") format('woff'), url("fonts/Voyage-Regular.ttf") format('truetype');
+      font-style: normal;
+    }
 
-}
+    @font-face {
+      font-family: "Voyage-Bold";
+      font-display: block;
+      src: url("fonts/Voyage-Bold.woff");
+      font-style: normal;
+    }
 
-#s:hover{
-  text-shadow: 0px 0px 5px white;
+    *{ /* Font overide for system fonts? Change back? */
+      font-family: Ubuntu, Roboto, Oxygen, -apple-system, BlinkMacSystemFont, Segoe UI, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+    }
 
-}
+    :root{
+      --theme: #6273D5;
+      --theme2: #6888D9;
+      --black1: #23252E;
+      --black2: #303547;
+      --white1: #FFFFFF;
+      --white2: #E3E3E3;
+    }
 
-#d{
-text-shadow: 0px 0px 10px white;
-font-size: 30px;
-}
+    body {
+      background-color: var(--black1);
+      font-size: 25px;
+      font-family: Voyage-Regular;
+      text-shadow: 0px 0px 20px var(--black1);
+      margin: 0;
+    }
 
-</style>
+    .content{
+      background: red;
+      max-width: 700px;
+      min-height: 100vh;
+      background: var(--black2);
+      border-left: 2px solid var(--theme);
+      border-right: 2px solid var(--theme);
+      color: var(--white2);
+      padding: 32px;
+    }
+
+    label {
+      font-family: Voyage-Regular;
+      font-size: 85px;
+    }
+
+    #search-outer {
+      background: var(--black1);
+      display: inline-block;
+      padding: 8px;
+      border-radius: 8px;
+      border: 2px solid #0b0b0b;
+    }
+
+    #search-outer:focus-within{
+      border-color: var(--theme2);
+      background: var(--black2);
+    }
+
+    input {
+      color: var(--white2);
+      outline: none !important;
+      padding-left: 3px;
+      width: 250px;
+      transition: .3s;
+      font-family: Voyage-Regular;
+      font-size: 25px;
+      background: #0000;
+      border: none;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    main p{
+      width: 45%;
+    }
+
+    @media (max-width: 600px){
+      main p{
+        width: 100%;
+      }
+    }
+
+    a {
+      color: var(--white2);
+    }
+
+    img {
+      border-radius: 0px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid var(--black1);
+    }
+
+    #s {
+      font-family: Voyage-Bold;
+      font-size: 25px;
+      background: transparent;
+      border: none;
+      border-radius: 0px;
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    #s:hover {
+      filter: contrast(80%);
+      cursor: pointer;
+    }
+
+    #d {
+      text-shadow: 0px 0px 10px var(--black1);
+      font-size: 30px;
+    }
+  </style>
 </head>
+
 <body>
-<center>
+  <center>
+    <div class="content">
+      <header>
+        <form>
+          <label for="input">SEARCH</label><br>
+          <form>
+            <div id="search-outer">
+              <input id="input" type="text" placeholder="Search Term">
+              <button id="s" type="submit">🔎</button>
+            </div>
+          </form>
+        </header>
 
-<header>
-<form>
-<label for="input">SEARCH</label><br>
-<form>
-<input id="input" type="text">
-<button id="s" type="submit">🔎</button>
-</form>
-</header>
-
-<main id="first"><p><a href="https://invidious.snopyta.org/embed/fVC8EYd_Z_g"><img alt="Palestine Diary" src="https://i.ytimg.com/vi/fVC8EYd_Z_g/hqdefault.jpg"></a><br><a href="https://invidious.snopyta.org/embed/fVC8EYd_Z_g">Edward Said On Orientalism</a></p></main>
-<footer><br><a id="d" href="download.html">download for iOS</a></footer>
-</center>
-<script src="js/index.js"></script>
+        <main id="first">
+          <p><a href="https://invidious.snopyta.org/embed/fVC8EYd_Z_g"><img alt="Palestine Diary" src="https://i.ytimg.com/vi/fVC8EYd_Z_g/hqdefault.jpg"></a><br><a href="https://invidious.snopyta.org/embed/fVC8EYd_Z_g">Edward Said On Orientalism</a></p>
+        </main>
+        <footer><br><a id="d" href="download.html">download for iOS</a></footer>
+    </div>
+  </center>
+  <script src="js/index.js"></script>
 </body>
+
 </html>
