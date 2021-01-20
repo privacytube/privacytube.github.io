@@ -66,20 +66,29 @@
       font-size: 85px;
     }
 
-    input {
-      padding-left: 3px;
-      width: 250px;
-      margin-bottom: 10px;
-      transition: .3s;
-      opacity: 0.75;
-      font-family: Voyage-Regular;
-      font-size: 25px;
+    #search-outer {
+      background: var(--black1);
+      display: inline-block;
+      padding: 8px;
+      border-radius: 8px;
+      border: 2px solid #0b0b0b;
     }
 
-    input:hover {
-      box-shadow: 0 0 5px black;
-      border-radius: 3px;
-      opacity: 1;
+    #search-outer:focus-within{
+      border-color: var(--theme2);
+      background: var(--black2);
+    }
+
+    input {
+      color: var(--white2);
+      outline: none !important;
+      padding-left: 3px;
+      width: 250px;
+      transition: .3s;
+      font-family: Voyage-Regular;
+      font-size: 25px;
+      background: #0000;
+      border: none;
     }
 
     main {
@@ -102,7 +111,6 @@
       font-family: Voyage-Bold;
       font-size: 25px;
       background: transparent;
-      text-shadow: 0px 0px 10px white;
       border: none;
       border-radius: 0px;
       margin: 0px;
@@ -111,8 +119,8 @@
     }
 
     #s:hover {
-      text-shadow: 0px 0px 5px white;
-
+      filter: contrast(80%);
+      cursor: pointer;
     }
 
     #d {
@@ -129,8 +137,10 @@
         <form>
           <label for="input">SEARCH</label><br>
           <form>
-            <input id="input" type="text">
-            <button id="s" type="submit">🔎</button>
+            <div id="search-outer">
+              <input id="input" type="text" placeholder="Search Term">
+              <button id="s" type="submit">🔎</button>
+            </div>
           </form>
         </header>
 
